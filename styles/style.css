@@ -1,0 +1,554 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
+}
+section {
+    max-width: calc(100% - 25rem);
+    margin: 0 auto;
+    padding: 85px 0;
+}
+p {
+    font-size: 15px;
+}
+
+/* Navigation */
+.nav {
+    font-size: 15px;
+    width: 100%;
+    height: 2.8rem;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    transition: all .3s;
+}
+.nav.sticky {
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.nav.sticky .link, .nav.sticky .search {
+    color: #020202;
+}
+.list {
+    display: flex;
+    list-style: none;
+}
+.link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #6e6e6e;
+    padding: 14px 16px;
+}
+.link:hover {
+    background: #CCCCCC;
+    color: #111;
+}
+.toggle {
+    display: none;
+}
+.search i {
+    color: #6e6e6e;
+    padding: 15px 18px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.search i:hover {
+    color: #fff;
+    background: #F44336;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+    background: url('../img/parallax1.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: opacity(75%);
+    display: flex;
+}
+.banner h2 {
+    position: relative;
+    margin: auto;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 450;
+    color: #fff;
+    padding: 12px 24px;
+    background: #020202;
+}
+
+/* About */
+.about {
+    width: 100%;
+    color: #777777;
+}
+.title {
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+}
+.sub-title {
+    font-style: italic;
+    text-align: center;
+    padding: 24px 0;
+}
+.desc {
+    line-height: 1.9;
+}
+/* */
+.about .lg-box {
+    width: 100%;
+    display: flex;
+    padding: 50px 0;
+    align-items: flex-start;
+}
+.about .img-box {
+    width: 49%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about .img-box b {
+    padding-bottom: 50px;
+}
+.about .img-box img {
+    width: 95%;
+    border-radius: 3px;
+    filter: opacity(60%);
+}
+.about .img-box img:hover {
+    filter: none;
+}
+.about .text-box {
+    width: 49%;
+}
+.about .text-box p {
+    line-height: 1.8;
+    padding-left: 25px;
+}
+/* Skills */
+.good-at {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.skill-box {
+    width: 100%;
+    color: #616161;
+}
+.skill-title {
+    font-weight: 400;
+    letter-spacing: 8px;
+    margin: 20px 0 15px;
+}
+.bar {
+    width: 100%;
+    height: 2.2rem;
+    position: relative;
+}
+.bar .main {
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bar .second {
+    height: 100%;
+    background: #616161;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+.bar .second-1 {
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: 5px;
+}
+.bar .second-2 {
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: 5px;
+}
+.bar .second-3 {
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: 5px;
+}
+
+/* Numbers */
+.numbers {
+    width: 100%;
+    /* height: 135px; */
+    background: #616161;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 15px 10px;
+}
+.num-box {
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+}
+.num-box h2 {
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* Portfolio Pic */
+.portfolio-pic {
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+    background-image: url('../img/parallax2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 75%;
+    display: flex;
+
+}
+.portfolio-pic h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 32px;
+    position: relative;
+    margin: auto;
+    padding-top: 10px;
+    letter-spacing: 13px;
+}
+
+/* My Work */
+.work {
+    width: 100%;
+    color: #777777;
+}
+.work .content {
+    display: flex;
+    flex-direction: column;
+}
+.work p {
+    line-height: 1.8;
+}
+.work .img-box {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .3rem;
+}
+.work .img-box img {
+    width: 95%;
+    margin-bottom: .7rem;
+}
+.work .img-box img:hover {
+    cursor: pointer;
+    filter: opacity(60%);
+}
+.work .btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #111;
+    margin: 25px auto 0;
+    padding: 14px 24px;
+    background: #eeeeee;
+}
+.work .btn:hover {
+    background: #CCCCCC;
+}
+
+/* Show Img */
+.show-img {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.842);
+    width: 100%;
+    height: 100vh;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a5a5a5;
+}
+.show-img i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    color: #fff;
+    padding: 15px 18px;
+    cursor: pointer;
+}
+.show-img i:hover {
+    color: #000;
+    background: #a5a5a5;
+}
+.show-img img{
+    width: auto;
+    height: auto;
+}
+.show-img h4 {
+    margin-top: 20px;
+}
+
+/* Contact Pic */
+.contact-pic {
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+    background-image: url('../img/parallax3.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 75%;
+    display: flex;
+
+}
+.contact-pic h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 34px;
+    position: relative;
+    margin: auto;
+    padding-top: 10px;
+    letter-spacing: 13px;
+}
+
+/* Contact */
+.contact {
+    width: 100%;
+    color: #777777;
+}
+
+.contact .contact-bx {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+/* Flex box one */
+.contact .contact-bx img {
+    width: 100%;
+    padding: 0 15px;
+    border-radius: 4%;
+}
+/* Flex box two */
+.contact .contact-bx-2 {
+    padding: 15px 20px;
+}
+.contact .contact-bx-2 .text-box {
+    line-height: 1.8;
+    font-size: 18px;
+}
+.contact .contact-bx-2 .text-box i {
+    margin-right: 16px;
+    font-size: large;
+}
+.contact .contact-bx-2 .text-box > *:first-child {
+    margin-right: 19px;
+}
+.contact .contact-bx-2 p {
+    margin: 20px 0;
+}
+/* Form */
+.contact .contact-bx-2 .form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+.contact .contact-bx-2 .form input {
+    height: 2.8rem;
+    padding: 5px 10px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #CCCCCC;
+}
+.contact .contact-bx-2 .form input:focus {
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+.contact .contact-bx-2 .form > *:nth-child(3) {
+    grid-column: 1 / 3;
+}
+/* Button */
+.contact .contact-bx-2 button {
+    outline: none;
+    border: none;
+    padding: 12px 18px;
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    float: right;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.contact .contact-bx-2 button:hover {
+    background: #CCCCCC;
+    color: #000;
+}
+
+/* Footer */
+footer {
+    padding: 60px;
+    background: #616161;
+    text-align: center;
+}
+footer:hover {
+    background: #000;
+}
+footer:hover .btn {
+    color: #000;
+}
+
+footer .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 18px;
+    background: #f8f8f8;
+    color: #616161;
+    margin: 10px 0;
+    font-size: 15px;
+}
+footer .btn i {
+    margin-right: 12px;
+}
+
+footer .icons-box {
+    color: #f8f8f8;
+    font-size: 24px;
+    margin: 12px 0;
+}
+footer .icons-box i {
+    cursor: pointer;
+}
+
+footer p {
+    color: #f8f8f8;
+    margin: 27px 0;
+}
+footer p a {
+    color: #f8f8f8;
+}
+
+/* Media queries */
+/* iPad Pro */
+@media screen and (max-width: 1024px) {
+    section {
+        max-width: calc(100% - 5rem);
+    }
+}
+
+/* iPad */
+@media screen and (max-width: 768px) {
+    section {
+        max-width: calc(100% - 2rem);
+    }
+}
+
+/* Surface Duo */
+@media screen and (max-width: 540px) {
+    .about .lg-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .about .lg-box .box {
+        width: 100%;
+    } 
+    .about .text-box p {
+        display: none;
+    }
+
+    .numbers {
+        flex-direction: column;
+    }
+    .num-box {
+        padding: 20px;
+    }
+
+    .work .img-box {
+        width: 100%;
+        margin: 20px auto;
+        grid-template-columns: 1fr;
+    }
+    .work .img-box img {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contact .contact-bx {
+        grid-template-columns: 1fr;
+    }
+
+    .contact .contact-bx-2 .form {
+        grid-template-columns: 1fr;
+    }
+    .contact .contact-bx-2 .form > *:nth-child(3) {
+        grid-column: auto;
+    }
+
+    .banner h2 {
+        text-indent: -9999px;
+        line-height: 0; /* Collapse the original line */
+    }
+    .banner h2::after {
+        content: "My Logo";
+        text-indent: 0;
+        display: block;
+        line-height: initial; /* New content takes up original line height */
+    }
+
+    /* Mobile Menu */
+    .list, .search, .link i {
+        display: none;
+    }
+    .toggle {
+        position: absolute;
+        display: initial;
+        color: #020202;
+        padding: 13px 18px;
+        cursor: pointer;
+        right: 0;
+    }
+    .toggle:hover {
+        background: #111;
+        color: #fff;
+    }
+    .list.active {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 300px;
+        top: 2.8rem;
+        height: auto;
+        background: #fff;
+        flex-direction: column;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+   }
+    .item {
+        width: 100%;
+        padding: 13px 0;
+    }
+}
